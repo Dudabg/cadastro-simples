@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produto</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <form id="formulario-cadastro">
+    <form action="{{ url_for('cadastrar_produto') }}" method="POST">
         <label for="nome">Nome do Produto:</label><br>
         <input type="text" id="nome" name="nome" required><br>
         <label for="descricao">Descrição do Produto:</label><br>
@@ -22,7 +21,5 @@
         </select><br><br>
         <button type="submit">Cadastrar</button>
     </form>
-    <button onclick="location.href='index.html'">Voltar para Listagem de Produtos</button>
-    <script src="scripts.js"></script>
 </body>
 </html>

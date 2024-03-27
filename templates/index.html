@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem de Produtos</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Listagem de Produtos</h1>
@@ -15,11 +14,15 @@
                 <th>Valor</th>
             </tr>
         </thead>
-        <tbody id="produtos-lista">
-            <!-- Os produtos serão listados aqui -->
+        <tbody>
+            {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.valor }}</td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
-    <button onclick="location.href='cadastro.html'">Cadastrar Novo Produto</button>
-    <script src="scripts.js"></script>
+    <a href="{{ url_for('cadastrar_produto') }}">Cadastrar Novo Produto</a>
 </body>
 </html>
