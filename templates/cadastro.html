@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\style.css">
     <title>Cadastro de Produto</title>
 </head>
 <body>
-    <h1>Cadastro de Produto</h1>
-    <form action="{{ url_for('cadastrar_produto') }}" method="POST">
-        <label for="nome">Nome do Produto:</label><br>
-        <input type="text" id="nome" name="nome" required><br>
-        <label for="descricao">Descrição do Produto:</label><br>
-        <input type="text" id="descricao" name="descricao" required><br>
-        <label for="valor">Valor do Produto:</label><br>
-        <input type="number" id="valor" name="valor" step="0.01" required><br>
-        <label for="disponivel">Disponível para venda:</label><br>
+    <h1 class="title">Cadastro de Produto</h1>
+    <form class="form" action="{{ url_for('cadastrar_produto') }}" method="POST">
+        <label class="label" for="nome">Nome do Produto:</label><br>
+        <input class="input" type="text" id="nome" name="nome" required><br>
+        <label class="label" for="descricao">Descrição do Produto:</label><br>
+        <input class="input" type="text" id="descricao" name="descricao" required><br>
+        <label class="label" for="valor">Valor do Produto:</label><br>
+        <input class="input" type="number" id="valor" name="valor" step="0.01" required><br>
+        <label class="label" for="disponivel">Disponível para venda:</label><br>
         <select id="disponivel" name="disponivel">
             <option value="sim">Sim</option>
             <option value="nao">Não</option>
         </select><br><br>
-        <button type="submit">Cadastrar</button>
+        <button class="button" type="submit">Cadastrar</button>
     </form>
 </body>
 </html>
